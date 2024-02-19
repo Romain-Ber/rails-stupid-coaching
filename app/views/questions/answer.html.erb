@@ -1,4 +1,19 @@
-<p><%= params[:question] %></p>
-<p><%= @answer %></p>
+<div class="container">
+  <h1>Stupid Coaching</h1>
+  <div class="row">
+    <div class="bd-gray my-3 align-items-center">
+      <p><%= params[:question] %></p>
+      <p><em>-You</em></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="bd-gray bg-yellow my-3 align-items-center">
+      <p><strong><%= @answer %></strong></p>
+      <p><em>-Your coach</em></p>
+    </div>
+  </div>
 
-<%= link_to "Ask a new question", ask_path %>
+  <div class="link">
+    <%= link_to "Ask a new question", ask_path, {:style => "text-decoration: none"} %>
+  </div>
+</div>
